@@ -3,6 +3,11 @@
 
 #include "olcPixelGameEngine.h"
 
+#define EINK_WIDTH 640
+#define EINK_HEIGHT 385
+#define WINDOW_WIDTH EINK_WIDTH+0
+#define WINDOW_HEIGHT EINK_HEIGHT+115
+
 class MainEngine : public olc::PixelGameEngine
 {
     public:

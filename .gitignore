@@ -31,3 +31,6 @@
 *.out
 *.app
 /include/olcPixelGameEngine.h
+/bin
+/obj
+*.depend

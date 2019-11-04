@@ -6,7 +6,7 @@
 int main()
 {
     MainEngine demo;
-    if (demo.Construct(256, 240, 4, 4))
+    if (demo.Construct(WINDOW_WIDTH, WINDOW_HEIGHT, 2, 2))
         demo.Start();
 
     return 0;
