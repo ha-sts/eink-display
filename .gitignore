@@ -34,3 +34,6 @@
 /bin
 /obj
 *.depend
+/lib
+/include/mosquittopp.h
+/include/mosquitto.h
