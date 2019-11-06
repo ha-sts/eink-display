@@ -7,6 +7,8 @@ MainEngine::MainEngine()
 
 bool MainEngine::OnUserCreate()
 {
+    //mqttHdl = new MqttWrapper("olc", "127.0.0.1", 1883);
+
     return true;
 }
 
@@ -19,6 +21,12 @@ bool MainEngine::OnUserUpdate(float fElapsedTime)
             Draw(x, y, olc::Pixel(level, level, level));
         }
     }
+
+    // Keep the MQTT Client happy
+    //if(mqttHdl->loop()) {
+        // Something is wrong, so reconnect
+        //mqttHdl->reconnect();
+    //}
 
     // Keep the supervisor happy.
     return true;

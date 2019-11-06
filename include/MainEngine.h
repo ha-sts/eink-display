@@ -3,6 +3,7 @@
 
 #include "olcPixelGameEngine.h"
 
+
 #define EINK_WIDTH 640
 #define EINK_HEIGHT 385
 #define WINDOW_WIDTH EINK_WIDTH+0
@@ -18,6 +19,7 @@ class MainEngine : public olc::PixelGameEngine
     protected:
 
     private:
+        class MqttWrapper *mqttHdl;
 };
 
 #endif // MAINENGINE_H

@@ -18,10 +18,8 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="user32" />
-					<Add library="gdi32" />
-					<Add library="opengl32" />
-					<Add library="gdiplus" />
+					<Add option="-static" />
+					<Add directory="lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -41,12 +39,23 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++14" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
 		</Compiler>
+		<Linker>
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="opengl32" />
+			<Add library="gdiplus" />
+			<Add directory="lib" />
+		</Linker>
 		<Unit filename="include/MainEngine.h" />
+		<Unit filename="include/mqtt_client.h" />
 		<Unit filename="include/olcPixelGameEngine.h" />
 		<Unit filename="src/MainEngine.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/mqtt_client.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
